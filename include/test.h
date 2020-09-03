@@ -4,6 +4,6 @@
 #include "foo.h"
 #include "bar.h"
 
-#define TEST(x) x + 26
+#define TEST(x) x + 27
 
 #endif // end if TEST_H
