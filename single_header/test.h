@@ -22,6 +22,6 @@ int func1(int x)
 
 #endif // end if BAR_H
 
-#define TEST(x) x + 39
+#define TEST(x) x + 42
 
 #endif // end if TEST_H
