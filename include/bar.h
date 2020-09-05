@@ -3,7 +3,7 @@
 
 int func1(int x)
 {
-    return x + 6;
+    return x + 7;
 }
 
 #define BAR(x) x
