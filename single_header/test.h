@@ -6,7 +6,7 @@
 
 int func1(int);
 
-#define FOO(x) x + 5
+#define FOO(x) x + 6
 
 #endif // end if FOO_H
 
