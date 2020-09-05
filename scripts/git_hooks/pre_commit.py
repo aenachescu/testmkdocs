@@ -15,7 +15,7 @@ def get_changed_files():
         sys.exit(1)
 
     for line in output.split(b'\n'):
-        files.append(str(line))
+        files.append(line)
 
     return files
 
@@ -85,7 +85,7 @@ generateSingleHeader = False
 
 files = get_changed_files()
 for filepath in files:
-    if filepath.startswith("include/"):
+    if filepath.startswith(b"include/"):
         generateSingleHeader = True
         break
 

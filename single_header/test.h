@@ -15,7 +15,7 @@ int func1(int);
 
 int func1(int x)
 {
-    return x + 1;
+    return x + 10;
 }
 
 #define BAR(x) x
