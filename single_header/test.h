@@ -6,7 +6,7 @@
 
 int func1(int);
 
-#define FOO(x) x + 7
+#define FOO(x) x + 9
 
 #endif // end if FOO_H
 
@@ -15,13 +15,13 @@ int func1(int);
 
 int func1(int x)
 {
-    return x + 11;
+    return x + 12;
 }
 
-#define BAR(x) x
+#define BAR(x) x + 1
 
 #endif // end if BAR_H
 
-#define TEST(x) x + 43
+#define TEST(x) x + 45
 
 #endif // end if TEST_H

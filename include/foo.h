@@ -3,6 +3,6 @@
 
 int func1(int);
 
-#define FOO(x) x + 7
+#define FOO(x) x + 9
 
 #endif // end if FOO_H

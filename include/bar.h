@@ -3,9 +3,9 @@
 
 int func1(int x)
 {
-    return x + 11;
+    return x + 12;
 }
 
-#define BAR(x) x
+#define BAR(x) x + 1
 
 #endif // end if BAR_H
