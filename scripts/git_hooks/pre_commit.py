@@ -11,11 +11,11 @@ def get_changed_files():
     output = proc.communicate()[0]
 
     if proc.returncode != 0:
-        print "git diff failed: " + str(proc.returncode)
+        print("git diff failed: " + str(proc.returncode))
         sys.exit(1)
 
-    for line in output.split('\n'):
-        files.append(line)
+    for line in output.split(b'\n'):
+        files.append(str(line))
 
     return files
 
@@ -33,8 +33,8 @@ def generate_single_header():
 
     output = proc.communicate()[0]
     if proc.returncode != 0:
-        print "failed to generate single header: " + str(proc.returncode)
-        print output
+        print("failed to generate single header: " + str(proc.returncode))
+        print(output)
         return False
 
     return True
@@ -47,8 +47,8 @@ def add_single_header():
     output = proc.communicate()[0]
 
     if proc.returncode != 0:
-        print "git add single header failed: " + str(proc.returncode)
-        print output
+        print("git add single header failed: " + str(proc.returncode))
+        print(output)
         return False
 
     return True
@@ -61,8 +61,8 @@ def stash_unstaged_changes():
     output = proc.communicate()[0]
 
     if proc.returncode != 0:
-        print "git stash unstaged changes failed: " + str(proc.returncode)
-        print output
+        print("git stash unstaged changes failed: " + str(proc.returncode))
+        print(output)
         return False
 
     return True
@@ -75,8 +75,8 @@ def stash_pop():
     output = proc.communicate()[0]
 
     if proc.returncode != 0:
-        print "git stash pop failed: " + str(proc.returncode)
-        print output
+        print("git stash pop failed: " + str(proc.returncode))
+        print(output)
         return False
 
     return True
@@ -90,7 +90,7 @@ for filepath in files:
         break
 
 if generateSingleHeader:
-    print "generating single header..."
+    print("generating single header...")
     if not stash_unstaged_changes():
         sys.exit(1)
     if not generate_single_header():
